@@ -1,0 +1,11 @@
+{
+  "name": "serverless-api-project",
+  "private": true,
+  "author": {
+    "name": "Valentim Araújo",
+    "email": "valentim@evodev.com.br"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
