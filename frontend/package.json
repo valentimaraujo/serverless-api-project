@@ -1,0 +1,8 @@
+{
+  "name": "@monorepo/frontend",
+  "version": "1.0.0",
+  "author": {
+    "name": "Valentim Araújo",
+    "email": "valentim@evodev.com.br"
+  }
+}

@@ -1,0 +1,8 @@
+recipients-register:
+  handler: src/modules/recipient/endpoints/create.handler
+  memorySize: 128
+  timeout: 30
+  events:
+    - http:
+        path: /service/recipients
+        method: post

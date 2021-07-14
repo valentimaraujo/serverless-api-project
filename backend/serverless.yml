@@ -1,0 +1,51 @@
+service: serverless-api-project
+variablesResolutionMode: 20210326
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  timeout: 10
+  memorySize: 512
+  versionFunctions: false
+
+  environment:
+    ${file(./src/configs/${self:provider.stage}.yml)}
+
+package:
+  patterns:
+    - '!src/test/**'
+
+custom:
+  region: ${self:provider.region}
+  stage: ${opt:stage, self:provider.stage}
+  prefix: ${self:custom.stage}-${self:service}
+  config: ${self:custom.prefix}-config
+
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+  serverless-offline:
+    httpPort: 3003
+
+  dynamodb:
+    stages:
+      - local
+      - test
+      - dev
+    start:
+      host: "dynamo"
+      port: 8000
+      inMemory: false
+      migrate: true
+      noStart: true
+
+plugins:
+  - serverless-webpack
+  - serverless-dynamodb-local
+  - serverless-offline
+  - serverless-plugin-monorepo
+
+functions: ${file(serverless-dynamic.js)}
