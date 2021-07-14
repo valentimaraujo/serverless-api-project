@@ -10,9 +10,9 @@
     "api",
     "serverless",
     "lambda",
-    "AWS",
-    "ReactJs",
-    "NodeJs"
+    "aws",
+    "reactjs",
+    "nodejs"
   ],
   "workspaces": [
     "packages/*"
