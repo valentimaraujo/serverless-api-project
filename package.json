@@ -5,6 +5,15 @@
     "name": "Valentim Araújo",
     "email": "valentim@evodev.com.br"
   },
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "serverless",
+    "lambda",
+    "AWS",
+    "ReactJs",
+    "NodeJs"
+  ],
   "workspaces": [
     "packages/*"
   ]

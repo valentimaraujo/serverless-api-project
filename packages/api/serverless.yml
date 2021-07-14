@@ -1,0 +1,16 @@
+service: serverless-api-project
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  timeout: 10
+  memorySize: 512
+  versionFunctions: false
+  package:
+    excludeDevDependencies: true
+    exclude:
+      - .test/**
+  environment:
+    ${file(.configs/${self:provider.stage}.yml)}
