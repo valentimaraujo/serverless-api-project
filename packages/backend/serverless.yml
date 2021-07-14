@@ -13,4 +13,14 @@ provider:
     exclude:
       - .test/**
   environment:
-    ${file(.configs/${self:provider.stage}.yml)}
+    ${file(.configs/
+
+custom:
+  region: ${self:provider.region}
+  stage: ${opt:stage, self:provider.stage}
+  prefix: ${self:custom.stage}-${self:service}
+  config: ${self:custom.prefix}-config
+
+functions: ${file(serverless-dynamic.js)}
+
+
