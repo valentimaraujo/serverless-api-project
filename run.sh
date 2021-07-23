@@ -18,7 +18,11 @@
 
 
 Comandos
+  JRE
+    - sudo apt install default-jdk
+    - sudo apt install default-jdk
 
-  yarn add serverless-dynamodb-local@0.2.35
+
+  yarn add serverless-dynamodb-local
   sls dynamodb install
 
