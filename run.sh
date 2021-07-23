@@ -10,6 +10,15 @@
 - How to Create an API with TypeScript on AWS with Serverless
   https://www.youtube.com/watch?v=HhgXwKFUzT8
 
+- Create a Serverless App on AWS using TypeScript — Part 1
+  https://levelup.gitconnected.com/creating-a-simple-serverless-application-using-typescript-and-aws-part-1-be2188f5ff93
+
 - Verificando se o projeto foi iniciado corretamente
   yarn workspaces list
+
+
+Comandos
+
+  yarn add serverless-dynamodb-local@0.2.35
+  sls dynamodb install
 

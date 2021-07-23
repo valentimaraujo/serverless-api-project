@@ -9,7 +9,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "sls offline start"
+    "start": "sls offline start --location ."
   },
   "engines": {
     "node": ">=12.22.1"

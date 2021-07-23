@@ -37,15 +37,14 @@ custom:
       - dev
     start:
       host: "dynamo"
-      port: 8000
+      port: 5000
       inMemory: false
       migrate: true
-      noStart: true
 
 plugins:
   - serverless-webpack
   - serverless-dynamodb-local
-  - serverless-offline
   - serverless-plugin-monorepo
+  - serverless-offline
 
 functions: ${file(serverless-dynamic.js)}
