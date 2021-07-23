@@ -19,7 +19,7 @@
 
 Comandos
   JRE
-    - sudo apt install default-jdk
+    - sudo apt install default-jre
     - sudo apt install default-jdk
 
 
